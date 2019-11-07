@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_primary"
+    android:padding="5dp"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current CGPA"
+                    android:textColor="@color/black"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+                   <EditText
+                    android:id="@+id/currentCGPA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="5.0"
+                    android:background="@drawable/background_trim_teal"
+                    android:textColorHint="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:inputType="numberDecimal"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_pad_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Course Unit"
+                        android:textColor="@color/black"
+                        android:typeface="monospace"
+                        android:padding="10dp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <EditText
+                        android:id="@+id/currentCredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="23 "
+                        android:textColorHint="@color/grey"
+                        android:background="@drawable/background_trim_teal"
+                        android:layout_alignParentRight="true"
+                        android:inputType="numberDecimal"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="1"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:background="@drawable/background_trim_teal"
+                    android:padding="10dp"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:background="@drawable/background_trim_teal"
+                    android:padding="10dp"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="2"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="3"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="4"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="5"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="6"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="7"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="8"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="9"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="10"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:layout_alignParentEnd="true"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_pad_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="11"
+                        android:textColor="@color/black" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_pad_white"
+                        android:completionThreshold="1"
+                        android:hint="@string/course_code"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:entries="@array/grade_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+                <Spinner
+                    android:id="@+id/chour11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/chour_arrays"
+                    android:padding="10dp"
+                    android:background="@drawable/background_trim_teal"
+                    android:popupBackground="@color/white"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_btn_white"
+        android:text="Calculate"
+        android:textColor="#009688"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
